@@ -2,6 +2,7 @@ package routes
 
 import (
 	"github.com/gin-gonic/gin"
+	category_routers "main.go/routes/category"
 	privilege_routers "main.go/routes/privilege"
 	users_routers "main.go/routes/users"
 	users_privilege_routers "main.go/routes/users_privilege"
@@ -14,4 +15,5 @@ func InitRoute(app *gin.Engine) {
 	users_routers.SetupUserRoutes(router)
 	privilege_routers.SetupPrivilegeRoutes(router)
 	users_privilege_routers.SetupUserPrivilegeRoutes(router)
+	category_routers.SetupCategoryRoute(router)
 }
